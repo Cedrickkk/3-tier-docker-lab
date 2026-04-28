@@ -4,14 +4,6 @@ This is my hands-on activity from a Docker tutorial I'm following to learn conta
 
 > Tutorial: [Complete Docker Course - From BEGINNER to PRO! (Learn Containers)](https://www.youtube.com/watch?v=RqTEHSBrYFw) by [DevOps Directive](https://www.youtube.com/@DevOpsDirective)
 
-## Architecture
-
-```
-client/          → Frontend (served via Nginx or similar)
-server-node/     → Interpreted backend (Node.js)
-server-java/     → Compiled backend (Spring Boot)
-```
-
 This project showcases how Docker can run different types of servers — an interpreted language runtime (Node.js) and a compiled JVM application (Spring Boot) — in isolated containers that communicate over a shared network.
 
 ## Getting Started
