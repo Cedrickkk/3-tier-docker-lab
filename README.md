@@ -32,11 +32,11 @@ docker compose down
 
 ## Project Structure
 
-| Folder         | Tech        | Type        | Description                |
-| -------------- | ----------- | ----------- | -------------------------- |
-| `client/`      | HTML/JS/CSS | Frontend    | Static frontend client     |
-| `server-node/` | Node.js     | Interpreted | REST API (no build step)   |
-| `server-java/` | Spring Boot | Compiled    | REST API (compiled to JAR) |
+| Folder            | Tech        | Type        | Description                |
+| ----------------- | ----------- | ----------- | -------------------------- |
+| `client/`         | HTML/JS/CSS | Frontend    | Static frontend client     |
+| `server-node/api` | Node.js     | Interpreted | REST API (no build step)   |
+| `server-java/api` | Spring Boot | Compiled    | REST API (compiled to JAR) |
 
 ## Key Docker Concepts Demonstrated
 
