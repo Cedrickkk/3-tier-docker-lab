@@ -1,10 +1,8 @@
 # 3-Tier Web App with Docker
 
-This is my hands-on activity from a Docker tutorial I'm following to learn containers. The original demo app from the tutorial has been swapped out with my own version using Node.js and Spring Boot as the backends.
+This is my hands-on activity from a Docker tutorial I'm following to learn containers.
 
 > Tutorial: [Complete Docker Course - From BEGINNER to PRO! (Learn Containers)](https://www.youtube.com/watch?v=RqTEHSBrYFw) by [DevOps Directive](https://www.youtube.com/@DevOpsDirective)
-
-This project showcases how Docker can run different types of servers — an interpreted language runtime (Node.js) and a compiled JVM application (Spring Boot) — in isolated containers that communicate over a shared network.
 
 ## Getting Started
 
