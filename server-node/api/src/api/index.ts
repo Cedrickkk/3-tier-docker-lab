@@ -1,17 +1,13 @@
 import express from "express";
-
-import type MessageResponse from "../interfaces/message-response.js";
-
-import emojis from "./emojis.js";
+import { getDateTime } from "../db";
 
 const router = express.Router();
 
-router.get<object, MessageResponse>("/", (req, res) => {
+router.get<object, { time: string; api: string }>("/", async (req, res) => {
   res.json({
-    message: "API - 👋🌎🌍🌏",
+    time: await getDateTime(),
+    api: "Node",
   });
 });
-
-router.use("/emojis", emojis);
 
 export default router;
