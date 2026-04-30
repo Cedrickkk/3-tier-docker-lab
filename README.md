@@ -1,4 +1,4 @@
-# 3-Tier Web App with Docker
+# Minimal 3-Tier Web App with Docker
 
 This is my hands-on activity from a Docker tutorial I'm following to learn containers.
 
@@ -6,25 +6,25 @@ This is my hands-on activity from a Docker tutorial I'm following to learn conta
 
 ## Getting Started
 
-Clone the repository and start all services with Docker Compose:
+Clone the repository and start the services with the Makefile targets:
 
 ```bash
-docker compose up --build
+make run-postgres
 ```
 
-This will build and start all three containers: the client, the Node.js server, and the Spring Boot server.
-
-To stop everything:
+```bash
+make run-api-node
+```
 
 ```bash
-docker compose down
+make run-api-java
 ```
 
 ## Project Structure
 
 | Folder            | Tech        | Type        | Description                |
 | ----------------- | ----------- | ----------- | -------------------------- |
-| `client/`         | HTML/JS/CSS | Frontend    | Static frontend client     |
+| `client/`         | React       | Frontend    | Static frontend client     |
 | `server-node/api` | Node.js     | Interpreted | REST API (no build step)   |
 | `server-java/api` | Spring Boot | Compiled    | REST API (compiled to JAR) |
 
