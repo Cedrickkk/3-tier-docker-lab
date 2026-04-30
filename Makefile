@@ -10,3 +10,12 @@ run-postgres:
 			-p 5433:5432 \
 			postgres:18.3-alpine
 
+.PHONY: run-api-node
+run-api-node:
+		@echo Starting Node API
+		cd server-node/api && npm run dev
+
+.PHONY: run-api-java
+run-api-java:
+		@echo Starting Java API
+		cd server-java/api && mvnw spring-boot:run
