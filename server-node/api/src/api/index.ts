@@ -1,13 +1,14 @@
 import express from "express";
+
 import { getDateTime } from "../db";
 
 const router = express.Router();
 
 router.get<object, { time: string; api: string }>("/", async (req, res) => {
-  res.json({
-    time: await getDateTime(),
-    api: "Node",
-  });
+  const dateTime = await getDateTime();
+  const response = dateTime;
+  response.api = "node";
+  res.send(response);
 });
 
 export default router;

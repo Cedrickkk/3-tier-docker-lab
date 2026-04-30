@@ -10,11 +10,11 @@ const app = express();
 
 app.use(morgan("dev"));
 app.use(helmet());
-app.use(cors());
+app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 
 // API
-app.use("/api/v1", api);
+app.use("/api/v1/node", api);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);

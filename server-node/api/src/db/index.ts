@@ -26,7 +26,7 @@ pool.on("error", (err) => {
 export const getDateTime = async () => {
   const client = await pool.connect();
   try {
-    const res = await client.query("SELECT NOW() as now");
+    const res = await client.query("SELECT NOW()");
     return res.rows[0];
   } catch (err) {
     console.error(err);
