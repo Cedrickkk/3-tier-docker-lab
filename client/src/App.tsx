@@ -1,12 +1,6 @@
-import {
-  QueryClient,
-  QueryClientProvider,
-  useQuery,
-} from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import "./App.css";
-
-const queryClient = new QueryClient();
 
 function CurrentTime({ api }: { api: string }) {
   const { isLoading, error, data, isFetching } = useQuery({
@@ -30,11 +24,11 @@ function CurrentTime({ api }: { api: string }) {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
+    <div>
       <h1>Hey 👋</h1>
       <CurrentTime api="http://localhost:8081/api/v1/java" />
       <CurrentTime api="http://localhost:3000/api/v1/node" />
-    </QueryClientProvider>
+    </div>
   );
 }
 
