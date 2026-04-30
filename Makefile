@@ -19,3 +19,8 @@ run-api-node:
 run-api-java:
 		@echo Starting Java API
 		cd server-java/api && mvnw spring-boot:run
+
+.PHONY: run-client-react
+run-client-react:
+	@echo Starting react client
+	cd client && npm run dev
